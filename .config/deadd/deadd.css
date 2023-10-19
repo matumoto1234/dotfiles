@@ -6,19 +6,23 @@
 }
 
 .noti-center.time {
-    font-size: 32px;
+    font-size: 48px;
+}
+
+.noti-center.date {
+    font-size: 16px;
 }
 
 /* Notifications */
 
 .notification.content {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 16px 32px;
 }
 
 .title {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
+    border-bottom: solid 1px white;
 }
 
 .appname {
@@ -27,6 +31,10 @@
 
 .time {
     font-size: 12px;
+}
+
+.body {
+    padding: 16px 0px;
 }
 
 .blurredBG.notification {
@@ -44,6 +52,7 @@
 }
 
 .notificationInCenter {
+    padding: 8px 16px;
     border-radius: 12px;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(35,91,200,1) 100%);
@@ -51,6 +60,7 @@
 }
 
 .notificationInCenter.critical {
+    padding: 16px;
     border-radius: 12px;
     background: rgb(36,0,0);
     background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(105,28,42,1) 35%, rgba(131,9,9,1) 100%);
@@ -70,31 +80,27 @@ label.notification {
 label.critical {
     color: white;
 }
+
 .notificationInCenter label.critical {
     color: white;
+}
+
+label.deadd-noti-center.in-center.appname {
+    margin-right: 16px;
 }
 
 
 /* Buttons */
 
 button {
-    background: transparent;
-    color: #322;
-    border-radius: 3px;
+    background: rgba(0, 20, 20, 0.2);
+    border-radius: 4px;
     border-width: 0px;
-    background-position: 0px 0px;
-    text-shadow: none;
 }
 
 button:hover {
-    border-radius: 3px;
     background: rgba(0, 20, 20, 0.2);
-    border-width: 0px;
-    border-top: transparent;
-    border-color: #f00;
-    color: #fee;
 }
-
 
 /* Custom Buttons */
 
@@ -146,7 +152,6 @@ button.buttonState2:hover {
 .userbuttonlabel.buttonState2:hover {
     color: #000;
 }
-
 
 /* Images */
 

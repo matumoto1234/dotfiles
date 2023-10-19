@@ -11,4 +11,4 @@ notification:
   popup:
     default-timeout: 10000
     margin-right: 200
-
+    margin-top: 48
