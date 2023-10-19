@@ -1,0 +1,328 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  /* code-runner begin here */
+  // {{{
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "vue": "cd $dir && clear && npm run dev",
+    "elm": "cd $dir && clear && elm reactor",
+    "javascript": "node",
+    "java": "cd $dir && clear && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -lm -o a.out && ./a.out",
+    "cpp": "cd $dir && g++ $fileName -O2 -Wall -Wextra -Wfatal-errors -fsplit-stack -fstack-protector-all -ftrapv -fsanitize=undefined -D_GLIBCXX_DEBUG -Wfloat-equal -std=c++20 -I/home/matumoto/code_box/compro/library/ -o a.out && ./a.out",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "cd $dir && python3 -u $fileName",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "cd $dir && dotnet run",
+    "vbscript": "cscript //Nologo",
+    "typescript": "cd $dir; tsc $fileName; node $fileNameWithoutExt.js",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "html": "cd $dir && open $fileName",
+    "rust": "cd $dir && cargo run",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runhaskell",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded"
+  },
+  // }}}
+  /* code-runner end here */
+  //
+  //
+  /* editor begin here */
+  // {{{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "editor.guides.bracketPairs": true,
+  // 行の折り返し
+  "editor.wordWrap": "off",
+  // カーソル系
+  "editor.lineNumbers": "on",
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSurroundingLines": 2,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSurroundingLinesStyle": "default",
+  // 検索系
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.suggestSelection": "first",
+  "editor.suggest.showWords": false,
+  "editor.suggest.showKeywords": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  // インデント系
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true,
+  // フォント系
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  // 入力に応じて系
+  "editor.formatOnType": false,
+  // }}}
+  /* editor end here */
+  //
+  //
+  /* vim begin here */
+  // {{{
+  // searchMatchColor
+  "vim.searchMatchColor": "#c6c6b0",
+  "vim.timeout": 1000,
+  "vim.useCtrlKeys": true,
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "/home/matumoto/.vimrc",
+  "vim.leader": "\\",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
+    },
+    {
+      "before": ["f"],
+      "after": ["leader", "leader"]
+    },
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
+    },
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.foldfix": true, // おりたたみしている所に vim 通過しても展開されなくする
+  "vim.easymotion": true,
+  /* vim end here */
+  // }}}
+  //
+  //
+  // {{{
+  /* VSpaceCode begin here */
+  "vspacecode.bindingOverrides": [
+    {
+      "keys": "t",
+      "name": "Tab...",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "h",
+          "name": "Change previous editor tab",
+          "type": "command",
+          "command": "workbench.action.previousEditor"
+        },
+        {
+          "key": "j",
+          "name": "Change previous editor tab",
+          "type": "command",
+          "command": "workbench.action.previousEditor"
+        },
+        {
+          "key": "k",
+          "name": "Change next editor tab",
+          "type": "command",
+          "command": "workbench.action.nextEditor"
+        },
+        {
+          "key": "l",
+          "name": "Change next editor tab",
+          "type": "command",
+          "command": "workbench.action.nextEditor"
+        },
+        {
+          "key": "d",
+          "name": "Delete current editor tab",
+          "type": "command",
+          "command": "workbench.action.closeActiveEditor"
+        },
+        {
+          "key": "H",
+          "name": "Move left editor tab",
+          "type": "command",
+          "command": "workbench.action.moveEditorLeftInGroup"
+        },
+        {
+          "key": "J",
+          "name": "Move left editor tab",
+          "type": "command",
+          "command": "workbench.action.moveEditorLeftInGroup"
+        },
+        {
+          "key": "K",
+          "name": "Move right editor tab",
+          "type": "command",
+          "command": "workbench.action.moveEditorRightInGroup"
+        },
+        {
+          "key": "L",
+          "name": "Move right editor tab",
+          "type": "command",
+          "command": "workbench.action.moveEditorRightInGroup"
+        }
+      ]
+    }
+  ],
+  "files.autoSaveDelay": 1000,
+  "git.autofetch": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  // "C_Cpp.updateChannel": "Insiders",
+  "remote.SSH.remotePlatform": {
+    "u-aizu-mac": "macOS",
+    "u-aizu-std4dc27": "linux",
+    "cadsv": "linux"
+  },
+  "terminal.integrated.scrollback": 20000,
+  "terminal.integrated.cursorBlinking": true,
+  "workbench.editorAssociations": {
+    "*.enc": "default",
+    "*.html": "default"
+  },
+  "C_Cpp.clang_format_style": "Google",
+  // おりたたみ
+  "explicitFolding.rules": {
+    "*": {
+      "begin": "{{{",
+      "end": "}}}"
+    }
+  },
+  "[python]": {
+    "gitlens.codeLens.symbolScopes": ["!Module"],
+    "editor.wordBasedSuggestions": false,
+    "editor.tabSize": 4
+  },
+  "[go]": {
+    "editor.tabSize": 4
+  },
+  "json.maxItemsComputed": 100000,
+  "search.useIgnoreFiles": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "gitlens.defaultDateLocale": null,
+  "gitlens.defaultDateFormat": null,
+  "gitlens.defaultTimeFormat": null,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.currentLine.enabled": false,
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "go.inlayHints.parameterNames": false,
+  "go.testTimeout": "90s",
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
+    },
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "cSpell.userWords": [
+    "fuga",
+    "hoge",
+    "matumoto",
+    "pacman",
+    "proconio",
+    "rustup",
+    "Usecase"
+  ],
+  "editor.inlineSuggest.enabled": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.fixAll.eslint"
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "none",
+  "haskell.manageHLS": "GHCup",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false,
+    "go": true,
+    "cpp": false,
+    "python": true,
+    "c": false
+  },
+  "files.autoSave": "afterDelay",
+  "remote.SSH.enableRemoteCommand": true,
+  "workbench.colorTheme": "Default Dark+",
+  "techtrain-railway.optOutTelemetry": false,
+  "workbench.editor.enablePreview": false,
+  "window.zoomLevel": 1,
+  "[rust]": {
+    "editor.tabSize": 4,
+    "editor.indentSize": "tabSize"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  }
+}
