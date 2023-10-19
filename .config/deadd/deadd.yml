@@ -8,6 +8,16 @@ notification-center:
   width: 700
 
 notification:
+  modifications:
+    - match:
+        app-name: "notify-send"
+      modify:
+        app-icon: "file:///home/matumoto/Pictures/notify-send/notification-fill-white.svg"
+        image-size: 80
+        timeout: -1
+        send-noti-closed: false
+        class-name: "notify-send"
+        action-icons: true
   popup:
     default-timeout: 10000
     margin-right: 200
