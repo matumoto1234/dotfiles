@@ -126,8 +126,9 @@
           "args": "m"
         }
       ]
-    }
+    },
   ],
+  "vim.camelCaseMotion.enable": true,
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
   "vim.foldfix": true, // おりたたみしている所に vim 通過しても展開されなくする
@@ -231,7 +232,7 @@
   },
   "[python]": {
     "gitlens.codeLens.symbolScopes": ["!Module"],
-    "editor.wordBasedSuggestions": false,
+    "editor.wordBasedSuggestions": "off",
     "editor.tabSize": 4
   },
   "[go]": {
@@ -310,7 +311,7 @@
     "go": true,
     "cpp": false,
     "python": true,
-    "c": false
+    "c": true
   },
   "files.autoSave": "afterDelay",
   "remote.SSH.enableRemoteCommand": true,
@@ -324,5 +325,11 @@
   },
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false
   }
 }
