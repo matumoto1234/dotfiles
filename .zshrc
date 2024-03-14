@@ -127,6 +127,8 @@ alias sudo='sudo '
 alias rm='rmtrash'
 alias rmdir='rmdirtrash'
 alias i3lock='i3lock -i ~/Pictures/backgrounds/i3lock_backgrounds.png -c "#000000" -o "#191d0f" -w "#572020" -l "#ffffff" -e'
+alias pomotroid='pomotroid --no-sandbox'
+alias set-input='xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" 0.5 && xinput disable "SynPS/2 Synaptics TouchPad"'
 
 # trash-cli descriptions
 # trash-put           trash files and directories.
