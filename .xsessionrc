@@ -1,2 +1,11 @@
 xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" 0.5
 xinput disable "SynPS/2 Synaptics TouchPad"
+
+# disable middleclick
+readonly TRACKPOINT_ID_ARRAY=$(xinput --list | grep 'TrackPoint' | grep -oP '(?<=id\=)[0-9]+')
+for id in $TRACKPOINT_ID_ARRAY; do
+  readonly BUTTON_MAP=$(xinput --get-button-map $id)
+  readonly NEW_BUTTON_MAP=$(echo $BUTTON_MAP | sed 's/2/0/')
+  xinput --set-button-map $ID $NEW_BUTTON_MAP
+done
+
